@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>Todo App</h1>
+    <CompletedTodo />
+    <AddTodo />
+    <hr />
+    <TodoList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoList from "./components/TodoList.vue";
+import AddTodo from "./components/AddTodo.vue";
+import CompletedTodo from "./components/CompletedTodo.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    TodoList,
+    AddTodo,
+    CompletedTodo
   }
-}
+};
 </script>
 
 <style>
@@ -21,6 +29,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin: 0px auto;
   margin-top: 60px;
+  max-width: 50rem;  
 }
 </style>
